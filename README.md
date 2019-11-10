@@ -1,4 +1,4 @@
-# AudioClassification
+# Audio Classification and Metadata Tags
 
 My Final Capstone Project from the Galvanize Data Science Immersive
 
