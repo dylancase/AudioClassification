@@ -28,3 +28,8 @@ $ docker run -it -p 5000:5000 codait/max-audio-classifier
 I was able to write a script (ClassifyAndTag.py) that takes a directory of audio files, sends them to the docker image running the IBM Audio Classifier to get it's top classifications and adds them as metadata tags.
 
 This script has improved my own Sound Effect Library's organization and metadata tags immensely. If any audio engineers out there would like help running this on their own Sound Effect Libraries, please reach out.
+
+Next Steps
+-----------------------
+1) Train a neural network specifically on classifying Sound Effect Libraries. While the IBM Developer Model Asset Exchange: Audio Classifier is certainly a very good audio classifier, it was not trained with this purpose in mind, I may get better results from a more domain specific Neural Network. One option would be to transfer learn from their model, so as not to completely abandon all of the training time and computing power that has gone into their model.
+2) Add synonyms to the metadata tags. For example, if my script is going to add 'clapping' as a tag, it should also probably add "applause" and/or "cheering". It could even read in the existing metadata tags (if there are any) and add synonyms of those tags as well.
