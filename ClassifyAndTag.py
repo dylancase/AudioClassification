@@ -27,7 +27,7 @@ def get_tags_and_add(dir, verbose=1):
             print('-------------------------------')
         existing = audio.get('TCON')
         if existing:
-            audio.add(TCON(text=' '.join(set(audio.get('TCON').text[0].split() + ['Beatboxing', 'Computer', 'keyboard']))))
+            audio.add(TCON(text=' '.join(set(audio.get('TCON').text[0].split()))))
         else:
             audio.add(TCON(text=' '.join(tags_to_add)))
         audio.save()
